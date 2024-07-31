@@ -12,8 +12,8 @@
             foreach (string subdirectory in Directory.GetDirectories(sourceDirectory)) {
                 string subdirectoryName = Path.GetFileName(subdirectory);
                 string destinationSubdirectory = Path.Combine(destinationDirectory, subdirectoryName);
-                File.Move(subdirectory, destinationSubdirectory);
-               // Directory.Delete(subdirectory, true);
+                Directory.Move(subdirectory, destinationSubdirectory);
+              
             }
         }
     }
